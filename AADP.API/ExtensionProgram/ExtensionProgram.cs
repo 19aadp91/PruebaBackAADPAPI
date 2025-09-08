@@ -59,8 +59,8 @@ namespace AADP.API.ExtensionProgram
                     Description = "JWT Authorization header using the Bearer scheme. Example: \"Bearer {token}\"",
                     Name = "Authorization",
                     In = ParameterLocation.Header,
-                    Type = SecuritySchemeType.Http, // ✅ debe ser Http
-                    Scheme = "Bearer",              // ✅ debe ser Bearer
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "Bearer",
                     BearerFormat = "JWT"
                 });
 
