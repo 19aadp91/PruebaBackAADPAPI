@@ -42,12 +42,13 @@ namespace AADP.API.Controllers
         }
 
         [HttpPost("Insert")]
-        public async Task<ActionResult<int>> InsertAsync([FromBody] Producto entity)
+        public async Task<ActionResult<string>> InsertAsync([FromBody] Producto entity)
         {
             try
             {
                 var newId = await _productoServices.InsertAsync(entity);
-                return Ok("El usuario fue creado con exito");
+                return Ok(new { mensaje = "El usuario fue creado con éxito" });
+
             }
             catch (Exception ex)
             {
